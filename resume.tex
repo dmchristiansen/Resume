@@ -1,0 +1,188 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+\usepackage{fontspec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+% Color definitions
+\definecolor{light-gray}{gray}{0.95}
+\definecolor{dark-blue}{RGB}{000,000,255}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks = true,
+    linkcolor = {dark-blue},
+    filecolor = {magenta},      
+    urlcolor = {cyan}
+}
+%\urlstyle{same}
+
+%\title{\textsf{\HUGE Daniel Christiansen\vspace{-3ex}}}
+\title{\textsf{\fontsize{50}{60}\selectfont Daniel Christiansen\vspace{-1.25ex}}}
+\author{}
+\date{}
+
+% Define variables for column widths
+\newcommand\leftcolwidthvar{0.35}
+\newcommand\rightcolwidthvar{0.60}
+
+\begin{document}
+\pagenumbering{gobble}
+
+% Set default font to Noto Sans
+\setmainfont[
+BoldFont=NotoSans-Bold.otf,
+ItalicFont=NotoSans-Italic.otf,
+BoldItalicFont=NotoSans-BoldItalic.otf,
+Color={202020}
+]{NotoSans-Regular.otf}
+
+% Set sans font to Noto Sans Light
+\setsansfont[
+BoldFont=NotoSans-Black.otf,
+ItalicFont=NotoSans-Light.otf,
+Color={101010}
+]{NotoSans-Thin.otf}
+
+% Set mono font - using for hyperlinks
+\setmonofont[
+BoldFont=NotoSans-Black.otf,
+ItalicFont=NotoSans-Light.otf % Not actually italic
+]{NotoSans-Regular.otf}
+
+% Name
+\maketitle
+
+% Intro statement
+\begin{center}
+\textsf{\textit{%
+Recent graduate with a demonstrated history of tackling the core problem of a project.\\
+I pride myself on having the ability to assess problems and break them down into workable parts.}}
+\end{center}
+\begin{center}
+\rule{0.80\textwidth}{.4pt}
+\end{center}
+\medskip
+%
+% Left column
+%
+\noindent
+\colorbox{light-gray}{%
+\begin{minipage}[t]{\leftcolwidthvar \textwidth}
+%
+% Contact
+%
+\begin{flushleft}
+\textsf{\Large Contact}\\
+\smallskip
+\texttt{\textit{%
+Email \href{mailto:christiansen.daniel@gmail.com}{christiansen.daniel@gmail.com}\\
+Github \href{https://github.com/dmchristiansen}{dmchristiansen}\\
+LinkedIn \href{https://www.linkedin.com/in/danielmatthewchristiansen/}{danielmatthewchristiansen}\\
+Ph\# (503) 952-6047\\}}
+\end{flushleft}
+%
+% Education
+%
+\vspace{0.5ex}
+\begin{flushleft}
+\textsf{\Large Education}\\
+\smallskip
+B.S. Computer Engineering\\ 
+\textsf{\textit{%
+Minor in Computer Science\\
+Portland State University\\
+Graduated June, 2018\\}}
+\end{flushleft}
+%
+% Skills
+%
+\vspace{0.5ex}
+\begin{flushleft}
+\textsf{\Large Skills}\\
+\medskip
+\textbf{Programming\\\vspace{2pt}}
+\textsf{\textit{%
+C, C++\\\vspace{2pt}
+Verilog/SystemVerilog\\\vspace{2pt}
+Python \\\vspace{2pt}
+Tensorflow\\\vspace{2pt}}}
+\textbf{Tools\\\vspace{2pt}}
+\textsf{\textit{%
+Git\\\vspace{2pt}
+ModelSim\\\vspace{2pt}
+KiCad\\\vspace{2pt}
+LTSpice\\\vspace{2pt}}}
+\end{flushleft}
+%
+% Relevant Coursework
+%
+\vspace{0.5ex}
+\begin{flushleft}
+\textsf{\Large Relevant Coursework}\\
+\medskip
+\textsf{\textit{%
+Hardware Description Language \& Prototyping\\\vspace{4pt}
+ASIC Modeling \& Synthesis\\\vspace{4pt}
+Digital IC Design\\\vspace{4pt}
+Industry Design Processes\\\vspace{4pt}
+Microprocessor System Design\\\vspace{4pt}}}
+\end{flushleft}
+\end{minipage}}
+\hfill
+%
+% Right Column
+%
+\begin{minipage}[t]{\rightcolwidthvar \textwidth}
+
+%
+% Relevant Projects
+%
+\begin{flushleft}
+\textsf{\Large Relevant Projects}\\
+\smallskip
+\textbf{Senior Capstone - FPGA Quadcopter Flight Controller}
+\hspace{0.25em}\vline\hspace{0.25em}\vspace{0.5ex}
+\texttt{\href{https://github.com/Zclarkwilliams/Drone2_LS_Capstone}{Link}}\\
+\textsf{\textit{%
+Team project used an FPGA development board to implement a flight controller module for a quadcopter in Verilog.
+\setlist{nolistsep}
+\begin{itemize}[noitemsep]
+    \item Uses I2C to poll external sensor module
+    \item Implemented a PID feedback controller to use sensor data to achieve stable flight
+    \item Processes / generates control signals to communicate with receiver module and motor speed controllers
+\end{itemize}}}
+\medskip
+\textbf{Industry Design Project - Mini Synth}
+\hspace{0.25em}\vline\hspace{0.25em}\vspace{0.5ex}
+\texttt{\href{https://github.com/dmchristiansen/ECE411_Mini_Synth}{Link}}\\
+\textsf{\textit{%
+A one-term team project focusing on good design practice.  Built a simple synthesizer from design documents to working prototype.  The intent of this project was to teach necessary time and project management skills for working in industry.\\
+\setlist{nolistsep}
+\begin{itemize}[noitemsep]
+\item Implemented direct digital synthesis in C on an AVR microcontroller
+\item Designed PCB in CAD software
+\item Assembled and debugged prototype PCB
+\end{itemize}}}
+\medskip
+\textbf{Cache simulator}
+\hspace{0.25em}\vline\hspace{0.25em}\vspace{0.5ex}
+\texttt{\href{https://github.com/dmchristiansen/Schoolwork/tree/master/ECE585/Final\%20Project}{Link}}\\
+\textsf{\textit{%
+As a term project for a microprocessor system design course, I wrote a program in C to simulate a multi-level cache using the MESI protocol.  The program takes in a memory trace file and produces statistics about the operation of the cache.  Written to be easily re-configurable to simulate a wide variety of cache architectures.\\}}
+\end{flushleft}
+\begin{flushleft}
+\textsf{\Large Employment Experience}\\
+\smallskip
+\textsf{\textit{%
+Basilisk (October 2016 - March 2018) - Line Cook\\
+Smallwares (Dec 2013 - July 2016) - Line Cook\\
+Departure (August 2012 - Nov 2013) - Line Cook}}
+\end{flushleft}
+\end{minipage}
+
+\bigskip
+
+\end{document}
